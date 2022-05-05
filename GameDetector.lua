@@ -8,7 +8,7 @@ local GamesSupported = {
       [6753141554] = {
          ["name"] = "Collect Simulator Recreated";
          ["function"] = function()
-           --loadstring(game:HttpGet("https://raw.githubusercontent.com/358x33/JustAHub/main/LuckSimulatorBetter.lua"))()
+           
          end
     },
 };
