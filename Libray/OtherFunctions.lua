@@ -19,7 +19,6 @@ local function OtherFunctions.getexploit()
  
     return exploit
 end
-
 local function OtherFunctions.GetExploit(EXPLOIT)
     if EXPLOIT then
         local Exploit = EXPLOIT
@@ -31,6 +30,11 @@ local function OtherFunctions.GetExploit(EXPLOIT)
            return "Free Exploit"
         end
     end
+end
+local function OtherFunctions.BlackListCheck(UserId,plr)
+    if table.finc(UserId,BlackListedIds) then
+        plr:kick("Blacklisted")
+  end
 end
 
 return OtherFunctions
