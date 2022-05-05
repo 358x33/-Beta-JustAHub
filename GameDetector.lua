@@ -23,22 +23,26 @@ local function getexploit()
     return exploit
 end
 
-if getexploit() then
-    local Exploit = getexploit()
-    if Exploit == "Synapse" or "Sentinel" or "Sirhurt" or "ProtoSmasher" or "Calmari" then
-       return "PaidExploit"
-    elseif Exploit == "Krnl" then
-       return "KRNL"
-    elseif Exploit == "WeAreDevs" or "EasyExploits" or "VIVA" or "Coco" then
-       return "Free Exploit"
+function GetExploit()
+    if getexploit() then
+        local Exploit = getexploit()
+        if Exploit == "Synapse" or "Sentinel" or "Sirhurt" or "ProtoSmasher" or "Calmari" then
+           return "PaidExploit"
+        elseif Exploit == "Krnl" then
+           return "KRNL"
+        elseif Exploit == "WeAreDevs" or "EasyExploits" or "VIVA" or "Coco" then
+           return "Free Exploit"
+        end
     end
 end
+
+GetExploit()
 
 local GamesSupported = {
       [6753141554] = {
          ["name"] = "Collect Simulator Recreated";
          ["function"] = function()
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/358x33/JustAHub/main/LuckSimulatorBetter.lua"))()
+           --loadstring(game:HttpGet("https://raw.githubusercontent.com/358x33/JustAHub/main/LuckSimulatorBetter.lua"))()
          end
     },
 };
