@@ -1,4 +1,5 @@
 repeat wait() until game:IsLoaded()
+
 local PlayerService = game:GetService("Players")
 local plr = PlayerService.LocalPlayer
 local CoreGui = game:GetService("StarterGui")
