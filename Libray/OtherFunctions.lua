@@ -1,4 +1,4 @@
-local Functions = {}
+local OtherFunctions = {}
 
 function Functions.Create(Class,name,Parent,Value)
   
@@ -16,4 +16,4 @@ function Functions.CreateFile(Text)
   
 end
 
-return Functions
+return OtherFunctions
