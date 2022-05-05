@@ -20,4 +20,17 @@ local function OtherFunctions.getexploit()
     return exploit
 end
 
+local function OtherFunctions.GetExploit(EXPLOIT)
+    if EXPLOIT then
+        local Exploit = EXPLOIT
+        if Exploit == "Synapse" or "Sentinel" or "Sirhurt" or "ProtoSmasher" or "Calmari" then
+           return "PaidExploit"
+        elseif Exploit == "Krnl" then
+           return "KRNL"
+        elseif Exploit == "WeAreDevs" or "EasyExploits" or "VIVA" or "Coco" then
+           return "Free Exploit"
+        end
+    end
+end
+
 return OtherFunctions
