@@ -6,7 +6,7 @@ local HubVersion = {}
   return "True"
   else
   loadstring(game:HttpGet("https://github.com/358x33/BetaJustAHub/blob/main/GameDetector.lua"))()
-  
+  print("Test")
   end
   end
   
