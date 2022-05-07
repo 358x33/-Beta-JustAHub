@@ -131,10 +131,232 @@ JoinOnKick()
 RemoveAFK()
 local Event = game:GetService("Workspace").Event.Aura.Aura
 Event:FireServer()
---// Ui \\-- Finally lol 
+
+-->> Ui <<--
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Collect Simulator Recreated", "Synapse")
+
 local Tab = Window:NewTab("Main")
 local Tab1 = Window:NewTab("Auto Farm")
 local Tab2 = Window:NewTab("Settings")
 local Tab3 = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Auto Gems")
+
+local AutoRuby
+local AutoSapphire
+local AutoDiamond
+local DoubleCashSkillTree
+local DoubleEXPtree
+local DoubleMultiTree
+local DoubleWork
+local SkillPoint
+local Junkyard1
+local Junkyard2
+local Junkyard3
+local Junkyard4
+local Junkyard5
+local Junkyard6
+local AutoOpal
+local SteelBeamOpal
+local TireOpal
+local IncreaseTireSteel
+local IncreaseMultiBagSteel
+local IncreaseVTires
+local IncreaseSteelVTires
+local AutoTar
+local AutoClicks
+local AutoCircle
+local OmegaChance
+local MaxRuby
+local MaxSapphire
+local MaxDiamond
+local MaxUpgradedSquare
+local MaxOpalUpgrades
+local MaxSteelUpgrades
+local MaxTiresUpgrades
+local AutoGemMines
+local ZanUpgrades
+local AutoJadeUpgrades
+local DiamondOneExp
+local DiamondMultiUltra
+
+--> Toggles <<--
+Section:NewToggle("Auto Ruby", "Automaticly buys \n Rubies", function(state)
+    if state then
+        AutoRuby = state
+    end
+end)
+Section:NewToggle("Auto Sapphire", "Automaticly buys \n Sapphire", function(state)
+    if state then
+        AutoSapphire = state
+    end
+end)
+Section:NewToggle("Auto Diamond", "Automaticly buys \n Diamonds", function(state)
+    if state then
+        AutoDiamond = state
+    end
+end)
+local Section2 = Tab:NewSection("Auto Skill Upgrades")
+Section2:NewToggle("Auto Double Cash", "Automaticly buys \n Double Cash Upgrade", function(state)
+    if state then
+        DoubleCashSkillTree = state
+    end
+end)
+Section2:NewToggle("Auto Double EXP", "Automaticly buys \n Double EXP Upgrade", function(state)
+    if state then
+        DoubleEXPtree = state
+    end
+end)
+Section2:NewToggle("Auto Double Multi", "Automaticly buys \n Double Multi Upgrade", function(state)
+    if state then
+        DoubleMultiTree = state
+    end
+end)
+Section2:NewToggle("Auto Double Miners Work", "Automaticly buys \n Double Miners Upgrade", function(state)
+    if state then
+        DoubleWork = state
+    end
+end)
+Section2:NewToggle("Auto Double SkillPoints Work", "Automaticly buys \n Double SP Upgrade", function(state)
+    if state then
+        SkillPoint = state
+    end
+end)
+local Section3 = Tab:NewSection("Auto Junkyards Upgrades")
+Section3:NewToggle("Auto Double J1 Work", "Automaticly buys \n Double J1 Upgrade", function(state)
+    if state then
+        Junkyard1 = state
+    end
+end)
+Section3:NewToggle("Auto Double J2 Work", "Automaticly buys \n Double J2 Upgrade", function(state)
+    if state then
+        Junkyard2 = state
+    end
+end)
+Section3:NewToggle("Auto Double J3 Work", "Automaticly buys \n Double J3 Upgrade", function(state)
+    if state then
+        Junkyard3 = state
+    end
+end)
+Section3:NewToggle("Auto Double J4 Work", "Automaticly buys \n Double J4 Upgrade", function(state)
+    if state then
+        Junkyard4 = state
+    end
+end)
+Section3:NewToggle("Auto Double J5 Work", "Automaticly buys \n Double J5 Upgrade", function(state)
+    if state then
+        Junkyard5 = state
+    end
+end)
+Section3:NewToggle("Auto Double J6 Work", "Automaticly buys \n Double J6 Upgrade", function(state)
+    if state then
+        Junkyard6 = state
+    end
+end)
+local Section4 = Tab:NewSection("Auto Opal Upgrades")
+Section4:NewToggle("Auto Opal", "Automaticly buys \n Opal", function(state)
+    if state then
+        AutoOpal = state
+    end
+end)
+Section4:NewToggle("Auto Steal Beam", "Automaticly buys \n Steel Beam Opal Upgrade", function(state)
+    if state then
+        SteelBeamOpal = state
+    end
+end)
+Section4:NewToggle("Auto Tire", "Automaticly buys \n Tires", function(state)
+    if state then
+        TireOpal = state
+    end
+end)
+local Section5 = Tab:NewSection("Auto Steel Upgrades")
+Section5:NewToggle("Auto Increase Tire", "Automaticly buys \n Tire at steels Upgrade", function(state)
+    if state then
+        IncreaseTireSteel = state
+    end
+end)
+Section5:NewToggle("Auto Increase Multi", "Automaticly buys \n Multi at bag", function(state)
+    if state then
+        IncreaseMultiBagSteel = state
+    end
+end)
+local Section6 = Tab:NewSection("Auto V-Tires Upgrades")
+Section6:NewToggle("Auto Increase V-Tires", "Automaticly buys \n V-Tires Production", function(state)
+    if state then
+        IncreaseVTires = state
+    end
+end)
+Section6:NewToggle("Auto Increase Steel V-Tires", "Automaticly buys \n V-Tires Production", function(state)
+    if state then
+        IncreaseSteelVTires = state
+    end
+end)
+local Section7 = Tab:NewSection("Auto Other Upgrades")
+Section7:NewToggle("Auto Tar", "Automaticly buys \n Tar", function(state)
+    if state then
+        AutoTar = state
+    end
+end)
+Section7:NewToggle("Auto Clicks", "Automaticly Clicks \n in Clicks", function(state)
+    if state then
+        AutoClicks = state
+    end
+end)
+Section7:NewToggle("Auto Circle", "Automaticly buys \n Circles", function(state)
+    if state then
+        AutoCircle = state
+    end
+end)
+Section7:NewToggle("Auto Omega Chance", "Automaticly buys \n Omega Chances in square upgrades", function(state)
+    if state then
+        OmegaChance = state
+    end
+end)
+Section7:NewButton("Max Ruby Upgrades", "Max Ruby Upgrades", function()
+    print("Clicked")
+end)
+Section7:NewButton("Max Sapphires Upgrades", "Max Sapphires Upgrades", function()
+    print("Clicked")
+end)
+Section7:NewButton("Max Diamonds Upgrades", "Max Diamonds Upgrades", function()
+    print("Clicked")
+end)
+Section7:NewButton("Max Upgraded Square", "Max Upgraded Square", function()
+    print("Clicked")
+end)
+Section7:NewButton("Max Opal Upgrades", "Max Opal Upgrades", function()
+    print("Clicked")
+end)
+Section7:NewButton("Max Steel Upgrades", "Max Steel Upgrades", function()
+    print("Clicked")
+end)
+Section7:NewButton("Max Tires Upgrades", "Max Tires Upgrades", function()
+    print("Clicked")
+end)
+Section7:NewToggle("Auto Gem Mines", "Automaticly buys \n Gem Mines", function(state)
+    if state then
+        AutoGemMines = state
+    end
+end)
+Section7:NewToggle("Auto Zan Upgrades", "Automaticly buys \n Zan Upgrades", function(state)
+    if state then
+        ZanUpgrades = state
+    end
+end)
+Section7:NewToggle("Auto Jade Upgrades", "Automaticly buys \n Jade Upgrades", function(state)
+    if state then
+        AutoJadeUpgrades = state
+    end
+end)
+Section7:NewToggle("Auto Diamond Player Level Exp Upgrades", "Automaticly buys \n Upgrade nil", function(state)
+    if state then
+        DiamondOneExp = state
+    end
+end)
+Section7:NewToggle("Auto Diamond Ultra Multi Upgrades", "Automaticly buys \n Upgrade nil", function(state)
+    if state then
+        DiamondMultiUltra = state
+    end
+end)
